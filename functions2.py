@@ -194,12 +194,48 @@ print(cube(5))
 e_o=lambda x:"Even" if x%2==0 else "Odd"
 print(e_o(5))
 
+print()
+def even(n):
+    return "Even" if n%2== 0 else "Odd"
+print(even(6))
 
 
+print()
+def factorial(n):
+    fact=1
+    for i in range(1,n+1):
+        fact*=i
+    return fact
+print(factorial(5))
 
+print()
+def maximum(a,b,c):
+    return max(a,b,c)
+print(maximum(10,30,40))
 
+print()
+def count_vowels(s):
+    count=0
+    for i in s.lower():
+        if i in "aeiou":
+            count+=1
+    return count
+print(count_vowels("Rahul"))
+square=lambda x:x*x
+print(square(6))
+print()
+cube=lambda x:x*x*x
+print(cube(10))
+print()
+even=lambda x:"Even" if x%2==0 else "Odd"
+print(even(39))
 
+num=[1,2,3,4,5,6,7,8]
+result=list(map(lambda x:x*2, nums))
+print(result)
 
+price=[100,200,300]
+final_price=list(map()  )
 
 
 

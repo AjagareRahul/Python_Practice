@@ -87,10 +87,54 @@ print(numbers)
 
 
 
+users=[
+    {"name":"A","active":True},
+    {"name":"B","active":False}]
+active_user=list(filter(lambda u:u["active"],users))
+print(active_user)
 
+number=[1,2,3,4,5,6,7,8]
+double_number=list(map(lambda u: u+u ,number))
+print(double_number)
 
+odd=list(filter(lambda x:x%2!=0,number))
+print(odd)
 
+num=[10,30,60,70,50,100]
+n=list(filter(lambda x: x>50,num))
+print(n)
 
+price=[100,200,300]
+total=list(map(lambda x:x*1.10,price))
+print(total)
+
+students=[
+    {"name":"A","marks":40},
+    {"name":"B","marks":80},
+    {"name":"c","marks":50}
+
+    ]
+mark=list(filter(lambda u: u['marks']>50,students))
+names=list(map(lambda u:u['name'],mark))
+print(names)
+print(mark)
+print()
+names=[s['name']for s in students if s['marks']>50]
+print(names)
+print()
+from functools import reduce
+nums=[1,2,3,4]
+result=reduce(lambda x,y:x+y,nums)
+print(result)
+
+total=reduce(lambda x,y:x+y,price)
+print(total)
+max_value=reduce(lambda a,b:a if a>b else b, nums)
+print(max_value)
+print()
+n=[1,2,3,4,5,6,7,8]
+m=reduce(lambda x,y:x*y,n)
+print(m)
 
 
 
