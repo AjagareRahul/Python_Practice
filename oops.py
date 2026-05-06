@@ -89,3 +89,101 @@ class Student():
     school="Netaji Vidyalaya"
     def __init__(self,name):
         self.name=name
+
+class Student:
+    def __init__(self,name):
+        self.name=name
+    def display(self):
+        print(self.name)
+s1=Student("Rajeev")
+s1.display()
+s2=Student("Rajeev")
+s2.display()
+
+class Car:
+    def __init__(self,brand,price):
+        self.brand=brand
+        self.price=price
+c1=Car("BMW",50000)
+print(c1.brand,c1.price)
+
+class Employee:
+    def __init__(self,name,salary):
+        self.name=name
+        self.salary=salary
+e1=Employee("Rajeev",40000)
+e2=Employee("Rajeev",50000)
+print(e1.name,e1.salary)
+print(e2.name,e2.salary)
+print()
+print()
+class BankAccount:
+    def __init__(self,name,balance):
+        self.name=name
+        self.balance=balance
+    def deposit(self,amount):
+        self.balance+=amount
+    def withdraw(self,amount):
+        self.balance-=amount
+
+acc=BankAccount("RAHUL",1000)
+acc.deposit(100)
+acc.withdraw(10)
+print(acc.balance)
+
+class Laptop:
+    brand="HP"
+l1=Laptop()
+l2=Laptop()
+print(l1.brand,l2.brand)
+Laptop.brand="DELL"
+print(Laptop.brand)
+print(l1.brand,l2.brand)
+
+
+print()
+print()
+class Student:
+    def __init__(self,name,marks):
+        self.name=name
+        self.marks=marks
+    def is_pass(self):
+        return self.marks>=40
+s1=Student("Rajeev",45)
+print(s1.is_pass())
+
+print()
+print()
+class Rectangle:
+    def __init__(self,length,width):
+        self.width=length
+        self.height=width
+    def area(self):
+        return self.width*self.height
+    def perimeter(self):
+        return 2*(self.width+self.height)
+r=Rectangle(10,20)
+print(r.area())
+print(r.perimeter())
+print()
+print()
+class Employee:
+    count=0
+    def __init__(self):
+        Employee.count+=1
+e1=Employee()
+e2=Employee()
+e3=Employee()
+print(Employee.count)
+
+class Account:
+    def __init__(self,balance):
+        self.balance=balance
+    def withdraw(self,amount):
+        if amount>(self.balance):
+            print("Insufficient Balance")
+        else:
+            return  f"self.balance-=amount"
+a=Account(1000)
+a.withdraw(100)
+print(a.balance)
