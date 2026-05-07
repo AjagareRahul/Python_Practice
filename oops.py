@@ -56,6 +56,8 @@ emp=Employee("Rahul",89000)
 emp.company="WIPRO"
 print(emp)
 print(emp.company)'''
+import math
+
 
 class Employee:
     def __init__(self,name,salary):
@@ -187,3 +189,56 @@ class Account:
 a=Account(1000)
 a.withdraw(100)
 print(a.balance)
+print()
+class Book:
+    def __init__(self,title,price):
+        self.title=title
+        self.price=price
+    def apply_discount(self,percent):
+        self.price=self.price-(self.price*percent/100)
+book=Book("LOVER",1000)
+book.apply_discount(10)
+print(book.price)
+
+print()
+
+class Circle:
+    def __init__(self,radius):
+        self.radius=radius
+    def area(self):
+        return math.pi*self.radius**2
+    def circumference(self):
+        return 2*math.pi*self.radius
+    def volume(self):
+        return math.pi*self.radius**2
+    def perimeter(self):
+        return 2*math.pi*self.radius
+circle=Circle(5)
+print(circle.area())
+print(circle.volume())
+print()
+class User:
+    def __init__(self,username,password):
+        self.username=username
+        self.password=password
+    def check_login(self,u,p):
+        return u==self.username and p==self.password
+user1=User("Rajeev","123")
+print(user1.check_login("Rajeev","123"))
+print()
+
+class Product:
+    def __init__(self,name,quantity):
+        self.name=name
+        self.quantity=quantity
+    def sell(self,q):
+        if self.quantity:
+            self.quantity-=q
+        if self.quantity<0:
+              
+p=Product("Rajeev",5)
+p.sell(10)
+print(p.quantity)
+print(p.name,p.quantity)
+
+
